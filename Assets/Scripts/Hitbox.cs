@@ -37,7 +37,7 @@ public class Hitbox : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         ICombat tempEnemy = other.GetComponent<ICombat>();
-        if(tempEnemy != null)
+        if(tempEnemy != null && SubscribedEnemies.Contains(tempEnemy))
         {
             //Debug.Log($"unsubbed: {other.gameObject.name}");
             

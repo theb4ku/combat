@@ -46,6 +46,7 @@ public class Player : MonoBehaviour,ICombat
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        Debug.Log($"Enemy dealt {damage} dmg, player's health: {currentHealth}");
     }
 
     public void DealDamage(float damage)
